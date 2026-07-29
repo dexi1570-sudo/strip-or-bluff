@@ -53,7 +53,7 @@ Strip or Bluff 是一个 MCP（Model Context Protocol）工具，让你的 AI �
 ### 1. 克隆仓库
 
 ```bash
-git clone https://github.com/yourname/striporbluff.git
+git clone https://github.com/Ryoame11/strip-or-bluff.git
 cd striporbluff
 ```
 

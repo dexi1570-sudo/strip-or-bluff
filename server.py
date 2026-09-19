@@ -2,9 +2,15 @@
 Strip or Bluff - MCP Server
 """
 from mcp.server.fastmcp import FastMCP
+import os
 import engine
 
-mcp = FastMCP("strip_or_bluff")
+mcp = FastMCP(
+    "strip_or_bluff",
+    host="0.0.0.0",
+    port=int(os.environ.get("PORT", "8000")),
+    streamable_http_path="/mcp",
+)
 
 
 @mcp.tool()
@@ -95,4 +101,4 @@ def game(action: str, args: str = "") -> str:
 
 
 if __name__ == "__main__":
-    mcp.run()
+    mcp.run(transport="streamable-http")
